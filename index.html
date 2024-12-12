@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Progress Circle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="skii">
+        <div class="name">
+            <div class="child">
+                <div class="parent">
+                    <div id="conut"></div>
+                </div>
+            </div>
+            <svg width="160" height="160">
+                <defs>
+                    <linearGradient id="GradienColor" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="68" fill="none" />
+            </svg>
+        </div>
+    </div>
+    <script>
+        const conut = document.getElementById('conut');
+        let number = 0;
+
+const interval = setInterval(() => {
+    if (number === 65) {
+        clearInterval(interval);
+    } else {
+        number += 1;
+        conut.innerHTML = number + '%';
+    }
+        }, 20); // Synchronize to match animation duration
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skii {
+    height: 160px;
+    width: 160px;
+}
+
+.name {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.child {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7);
+}
+
+.parent {
+    font-weight: 500;
+    color: #555;
+}
+
+circle {
+    filter: none;
+    stroke: url(#GradienColor);
+    stroke-width: 20px;
+    stroke-dasharray: 427;
+    stroke-dashoffset: 427;
+    animation: anim 6.5s linear forwards;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim {
+    to {
+        stroke-dashoffset: 165;
+    }
+}
